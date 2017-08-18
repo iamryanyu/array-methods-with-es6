@@ -1,0 +1,146 @@
+@charset "UTF-8";
+
+// @import '_sprite';
+@import 'node_modules/normalize.css/normalize';
+
+// Variables
+// Colors
+$pure-white: #fff;
+$pure-black: #000;
+$athens-gray: #dedede;
+$toolbox: #7474BF;
+$curious-blue: #348AC7;
+$fuel-yellow: #eda320;
+// Fonts
+$droid-serif: 'Droid Serif', serif;
+$kalam: 'Kalam', cursive;
+$open-sans: 'Open Sans', sans-serif;
+// transition
+$transition: .5s cubic-bezier(.77, 0, .175, 1);
+
+// Functions
+// Convert a pixel value to REM units
+@function px-to-rem($pixel) {
+  @return $pixel / 16 + rem;
+}
+
+// Styles
+body {
+  background: $toolbox;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, $curious-blue, $toolbox);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, $curious-blue, $toolbox); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  font-family: $open-sans;
+}
+
+.o-main {
+  background-color: rgba(0, 0, 0, .4);
+  border: px-to-rem(5) solid rgba(0, 0, 0, .5);
+  border-radius: px-to-rem(4);
+  margin: px-to-rem(50) auto;
+  padding: 0 px-to-rem(40) px-to-rem(40);
+  width: px-to-rem(700);
+}
+
+h1,
+h2,
+h3 {
+  color: $pure-white;
+  font-family: $droid-serif;
+  font-weight: 400;
+}
+
+h1 {
+  font-size: px-to-rem(40);
+  margin: px-to-rem(50) 0;
+  text-align: center;
+}
+
+h2 {
+  color: $fuel-yellow;
+  font-size: px-to-rem(25);
+  margin: px-to-rem(30) 0;
+}
+
+h3 {
+  font-family: $open-sans;
+  font-size: px-to-rem(16);
+}
+
+a {
+  color: $pure-black;
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+pre {
+  background-color: rgba(0, 0, 0, .8);
+  color: $athens-gray;
+  padding: px-to-rem(20);
+  white-space: pre-wrap;
+}
+
+.u-font-color-white {
+  color: $pure-white !important;
+}
+
+.ryanyu {
+  display: block;
+  font-family: $kalam;
+  height: px-to-rem(70);
+  margin: px-to-rem(50) auto 0;
+  position: relative;
+  text-align: center;
+  width: px-to-rem(70);
+
+  img {
+    background-color: $pure-white;
+    border: px-to-rem(3) solid $fuel-yellow;
+    border-radius: 50%;
+    height: px-to-rem(70);
+    object-fit: contain;
+    width: px-to-rem(70);
+  }
+}
+
+.ryanyu__front {
+  backface-visibility: hidden;
+  height: inherit;
+  position: absolute;
+  top: 0;
+  transform: rotateX(0) rotateY(0);
+  transform-style: preserve-3d;
+  transition: all $transition;
+  z-index: 900;
+
+  .ryanyu:hover & {
+    transform: rotateY(180deg);
+  }
+}
+
+.ryanyu__back {
+  background-color: $pure-white;
+  backface-visibility: hidden;
+  border-radius: 50%;
+  color: $fuel-yellow;
+  height: inherit;
+  position: absolute;
+  text-align: center;
+  top: 0;
+  transform: rotateY(180deg);
+  transform-style: preserve-3d;
+  transition: all $transition;
+  width: inherit;
+  z-index: 1000;
+
+  &::before {
+    content: 'ryanyu .com';
+    display: block;
+    transform: rotate(-45deg) translate(-12px, 12px);
+  }
+
+  .ryanyu:hover & {
+    transform: rotateY(0);
+  }
+}
