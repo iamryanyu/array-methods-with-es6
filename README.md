@@ -6,7 +6,7 @@
   or <a href="https://codepen.io/iamryanyu/pen/prajEp" target="_blank">CodePen (@iamryanyu).</a>
 </p>
 <h2>0. Sample data</h2>
-<script src="https://gist.github.com/iamryanyu/f41bfa40eeb3c6ff66f831c632bfea75.js"></script>
+{% gist f41bfa40eeb3c6ff66f831c632bfea75 %}
 
 <h2>1. Array.prototype.filter()</h2>
 <h3>🤔 Filter the list of inventors for those who were born in the 1500's.</h3>
