@@ -6,7 +6,8 @@
   or <a href="https://codepen.io/iamryanyu/pen/prajEp" target="_blank">CodePen (@iamryanyu).</a>
 </p>
 <h2>0. Sample data</h2>
-```js
+
+```javascript
 const inventors = [
   { first: 'Albert', last: 'Einstein', year: 1879, passed: 1955 },
   { first: 'Isaac', last: 'Newton', year: 1643, passed: 1727 },
