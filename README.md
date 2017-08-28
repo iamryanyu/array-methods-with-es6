@@ -1,5 +1,5 @@
 <h1>Array Cardio with ES6 💪</h1>
-<p>Exploring JS array methods - <span class="u-font-color-white">filter(), map(), sort() and reduce()</span>.</p>
+<p>Exploring JS array methods - <span class="u-font-color-white">filter(), map(), sort(), reduce(), some(), every(), find() and findIndex()</span>.</p>
 <p>JS practice with <a href="http://javascript30.com" target="_blank">JavaScript30</a> by Wes Bos.</p>
 <p>
   Updated code available from <a href="https://github.com/iamryanyu/js30-04-array-cardio-with-es6" target="_blank">GitHub (@iamryanyu)</a>
