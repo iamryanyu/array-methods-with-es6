@@ -133,9 +133,8 @@ console.table(oldest);
 
 ```javascript
 const category = document.querySelector('.mw-category');
-const links = category.querySelectorAll('a');
-
-const links = Array.from(document.querySelectorAll('.mw-category a'));
+//const links = category.querySelectorAll('a');
+//const links = Array.from(document.querySelectorAll('.mw-category a'));
 
 const links = [...document.querySelectorAll('.mw-category a')];
 const de = links
@@ -189,3 +188,94 @@ const transportation = data.reduce((obj, item) => {
 
 console.log(transportation);
 ```
+
+<h2>More sample data</h2>
+
+```javascript
+const students = [
+  { name: 'Wes', year: 1988 },
+  { name: 'Kait', year: 1986 },
+  { name: 'Irv', year: 1970 },
+  { name: 'Lux', year: 2015 },
+];
+
+const comments = [
+  { text: 'Love this!', id: 523423 },
+  { text: 'Super good', id: 823423 },
+  { text: 'You are the best', id: 2039842 },
+  { text: 'Ramen is my fav food ever', id: 123523 },
+  { text: 'Nice Nice Nice!', id: 542328 }
+];
+```
+
+<h2>9. Array.prototype.some()</h2>
+<h3>🤔 Is at least one student 19?</h3>
+
+<p>Code</p>
+
+```javascript
+const isAdult = students.some(student => {
+  const currentYear = (new Date()).getFullYear();
+
+  return currentYear - student.year >= 19;
+});
+
+console.log({isAdult});
+```
+<ul>
+  <li><a href="https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Array/some">https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Array/some</a></li>
+</ul>
+
+<h2>10. Array.prototype.every()</h2>
+<h3>🤔 Is everyone 19?</h3>
+
+<p>Code</p>
+
+```javascript
+const allAdults = students.every(student => {
+  const currentYear = (new Date()).getFullYear();
+
+  return currentYear - student.year >= 19;
+});
+
+console.log(allAdults);
+```
+<ul>
+  <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/every">https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/every</a></li>
+</ul>
+
+<h2>11. Array.prototype.find()</h2>
+<h3>🤔 Find the comment with the ID of 823423</h3>
+
+<p>Code</p>
+
+```javascript
+const comment = comments.find(comment => comment.id === 823423);
+
+console.log(comment);
+```
+<ul>
+  <li><a href="https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Array/find">https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Array/find</a></li>
+</ul>
+
+<h2>12. Array.prototype.findIndex()</h2>
+<h3>🤔 Find and delete the comment with the ID of 823423</h3>
+
+<p>Code</p>
+
+```javascript
+const index = comments.findIndex(comment => comment.id === 823423);
+
+// comments.splice(index, 1);
+
+const newComments = [
+  ...comments.slice(0, index),
+  ...comments.slice(index + 1)
+];
+
+console.table(comments);
+console.table(newComments);
+```
+<ul>
+  <li><a href="https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Array/findIndex">https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Array/findIndex</a></li>
+</ul>
