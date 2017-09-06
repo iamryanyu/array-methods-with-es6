@@ -1,4 +1,4 @@
-<h1>Array Cardio with ES6 💪</h1>
+<h1>Array Methods with ES6 💪</h1>
 <p>Exploring JS array methods - <span class="u-font-color-white">filter(), map(), sort(), reduce(), some(), every(), find() and findIndex()</span>.</p>
 <p>JS practice with <a href="http://javascript30.com" target="_blank">JavaScript30</a> by Wes Bos.</p>
 <p>
@@ -254,6 +254,9 @@ const comment = comments.find(comment => comment.id === 823423);
 
 console.log(comment);
 ```
+
+<p>Note: if you want to find multiple results, use .filter.</p>
+
 <ul>
   <li><a href="https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Array/find">https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Array/find</a></li>
 </ul>
